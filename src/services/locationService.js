@@ -1,0 +1,1 @@
+const cities=require('../data/taiwanCity.json');module.exports={getNearestCity(lat,lon){let m=Infinity,n='臺北市';cities.forEach(c=>{const d=(lat-c.lat)**2+(lon-c.lon)**2;if(d<m){m=d;n=c.city;}});return n;}}
